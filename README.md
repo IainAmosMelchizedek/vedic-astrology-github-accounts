@@ -50,3 +50,33 @@ gh api --method GET search/users -f q="vedic astrology" --jq '.items[].login'
 - Inclusion does not guarantee relevance or activity  
 - False positives are expected  
 - This is a candidate dataset, not an authoritative registry
+
+## Dataset Formats
+
+This repository provides the dataset in multiple formats to support different use cases:
+
+### CSV (`data/accounts.csv`)
+- Best for spreadsheets, Excel, and quick inspection
+- Tabular format with headers
+- Easy to filter, sort, and analyze manually
+
+### JSON (`data/accounts.json`)
+- Structured format for APIs and general programming use
+- Easily consumed by JavaScript, Python, and other languages
+- Suitable for loading the entire dataset at once
+
+### JSONL (`data/accounts.jsonl`)
+- Line-delimited JSON format (one record per line)
+- Optimized for machine learning and data pipelines
+- Enables streaming processing without loading the entire dataset into memory
+- Compatible with tools like Spark, BigQuery, and embedding pipelines
+
+## Why Multiple Formats?
+
+Providing the dataset in CSV, JSON, and JSONL ensures accessibility across:
+
+- Analysts (CSV)
+- Developers (JSON)
+- Machine learning workflows (JSONL)
+
+This multi-format approach increases usability, portability, and integration potential across different systems and workflows.
